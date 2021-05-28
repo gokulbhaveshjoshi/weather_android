@@ -38,7 +38,7 @@ class WeatherActivity : AppCompatActivity() {
     }
 
     private fun listener() {
-        weatherViewModel!!.observeWeatherInfo().observe(this, Observer {
+        weatherViewModel!!.observeWeatherInfo().observe(this, {
             setVisibility(0,1,0)
 
             if (it != null) {
@@ -79,9 +79,7 @@ class WeatherActivity : AppCompatActivity() {
                 } else {
 //                    Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show()
                     Log.d("Permission", "No ")
-                    clError.visibility = View.VISIBLE
-                    pbLoading.visibility = View.GONE
-                    vpWeather.visibility = View.GONE
+                    setVisibility(0,0,1)
                 }
                 return
             }

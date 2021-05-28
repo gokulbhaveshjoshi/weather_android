@@ -30,13 +30,14 @@ class WeatherDetailsAdapter : RecyclerView.Adapter<WeatherDetailsAdapter.ViewHol
 
             //set day
             var day = when (time) {
-                in 169..192 -> "Day 8"
-                in 145..168 -> "Day 7"
-                in 121..144 -> "Day 6"
-                in 97..120 -> "Day 5"
-                in 73..96 -> "Day 4"
-                in 49..72 -> "Day 3"
-                in 25..48 -> "Day 2"
+                in 192..200-> "Day 9"
+                in 168..191 -> "Day 8"
+                in 144..167 -> "Day 7"
+                in 120..143 -> "Day 6"
+                in 96..119 -> "Day 5"
+                in 72..95 -> "Day 4"
+                in 48..71 -> "Day 3"
+                in 24..47 -> "Day 2"
                 else -> "Day 1"
             }
             itemView.tvDay.text = day.toString()

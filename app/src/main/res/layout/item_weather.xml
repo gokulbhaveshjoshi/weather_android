@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cvRoot"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="15dp"
     app:cardBackgroundColor="@color/teal_200"
     app:cardCornerRadius="25dp">
 
@@ -48,14 +48,64 @@
             />
 
         <TextView
-            android:id="@+id/tvTemperature"
+            android:id="@+id/tvMaxTemperature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tvMinTemperature"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTemp"
+            android:text="Temperaature"
+            android:layout_margin="10dp"
+            android:textAlignment="viewEnd"
+            android:textSize="20sp"
+            android:drawableEnd="@drawable/ic_up"
+            android:textStyle="italic"
+            android:drawablePadding="10dp"
+            app:layout_constraintBottom_toTopOf="@id/tvWindSpeed"/>
+
+
+        <TextView
+            android:id="@+id/tvTemp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvDate"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvDate"
+            android:text="Temperature"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/tvMinTemperature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvMaxTemperature"
+            android:textAlignment="viewStart"
+            app:layout_constraintTop_toBottomOf="@id/tvTemp"
+            android:text="Temperature"
+            android:drawableStart="@drawable/ic_down"
+            android:drawablePadding="10dp"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@id/tvWindSpeed"
+            />
+
+
+
+        <TextView
+            android:id="@+id/tvWindSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:text="Temperaature"
             android:textSize="35sp"
+            android:layout_marginBottom="25dp"
+            android:drawableStart="@drawable/ic_wind"
             android:textStyle="italic"
             app:layout_constraintBottom_toBottomOf="parent"/>
 

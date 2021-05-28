@@ -1,10 +1,12 @@
-package com.gokul.weather
+package com.gokul.weather.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.gokul.weather.R
+import com.gokul.weather.activity.WeatherDetailsActivity
 import com.gokul.weather.model.Datasery
 import kotlinx.android.synthetic.main.item_weather.view.*
 import java.time.LocalDate

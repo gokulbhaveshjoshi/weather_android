@@ -1,4 +1,4 @@
-package com.gokul.weather
+package com.gokul.weather.viewModel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData

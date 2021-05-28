@@ -1,17 +1,14 @@
-package com.gokul.weather
+package com.gokul.weather.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.gokul.weather.GPS.GpsTracker
 import com.gokul.weather.R
+import com.gokul.weather.adapter.WeatherDetailsAdapter
 import com.gokul.weather.viewModel.WeatherDetailsViewModel
-import com.gokul.weather.viewModel.WeatherViewModel
-import kotlinx.android.synthetic.main.activity_weather.*
-import kotlinx.android.synthetic.main.activity_weather.vpWeather
 import kotlinx.android.synthetic.main.activity_weather_details.*
 
 class WeatherDetailsActivity : AppCompatActivity() {

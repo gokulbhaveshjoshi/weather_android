@@ -1,10 +1,11 @@
-package com.gokul.weather
+package com.gokul.weather.adapter
 
 import android.graphics.Color.parseColor
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.gokul.weather.R
 import com.gokul.weather.model.DataseryX
 import kotlinx.android.synthetic.main.item_weathe_details.view.*
 

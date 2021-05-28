@@ -1,4 +1,4 @@
-package com.gokul.weather
+package com.gokul.weather.extension
 
 import android.content.Context
 import android.graphics.Rect

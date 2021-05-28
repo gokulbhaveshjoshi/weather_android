@@ -14,9 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Weather"
         android:usesCleartextTraffic="true">
-        <activity android:name=".WeatherDetailsActivity"></activity>
-        <activity android:name=".WeatherActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.WeatherDetailsActivity"></activity>
+        <activity android:name=".activity.WeatherActivity" />
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

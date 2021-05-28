@@ -1,23 +1,20 @@
-package com.gokul.weather
+package com.gokul.weather.activity
 
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager2.widget.CompositePageTransformer
-import androidx.viewpager2.widget.MarginPageTransformer
-import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import com.gokul.weather.GPS.GpsTracker
+import com.gokul.weather.R
+import com.gokul.weather.adapter.WeatherAdapter
+import com.gokul.weather.extension.HorizontalMarginItemDecoration
 import com.gokul.weather.viewModel.WeatherViewModel
 import kotlinx.android.synthetic.main.activity_weather.*
-import java.lang.Math.abs
 import androidx.viewpager2.widget.ViewPager2.PageTransformer as PageTransformer1
 
 

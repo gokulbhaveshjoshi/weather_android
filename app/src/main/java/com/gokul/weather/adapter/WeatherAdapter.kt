@@ -52,52 +52,80 @@ class WeatherAdapter :
             //Wind Speed
             itemView.tvWindSpeed.text = item.wind10m_max.toString()
 
-            itemView.tvWeatherName.text = item.weather.toString()
+
 
             //Set image
             when (item.weather) {
                 "clear" -> {
                     itemView.ivWeatherImage.setImageResource(R.drawable.ic_clear)
+                    itemView.nsvHead.setBackgroundResource(R.drawable.clear)
+                    itemView.tvWeatherName.text = "CLEAR"
                 }
                 "cloudy" -> {
                     itemView.ivWeatherImage.setImageResource(R.drawable.ic_cloud)
+                    itemView.nsvHead.setBackgroundResource(R.drawable.cloudy)
+                    itemView.tvWeatherName.text = "Cloudy"
                 }
                 "mcloudy" -> {
                     itemView.ivWeatherImage.setImageResource(R.drawable.ic_cloudly)
+                    itemView.nsvHead.setBackgroundResource(R.drawable.cloudyy)
+                    itemView.tvWeatherName.text = "Heavy Cloud"
                 }
                 "lightrain" -> {
                     itemView.ivWeatherImage.setImageResource(R.drawable.ic_rain)
+                    itemView.nsvHead.setBackgroundResource(R.drawable.light_rain)
+                    itemView.tvWeatherName.text = "Rain"
                 }
                 "pcloudy" -> {
                     itemView.ivWeatherImage.setImageResource(R.drawable.ic_cloudly)
+                    itemView.nsvHead.setBackgroundResource(R.drawable.cloudyy)
+                    itemView.tvWeatherName.text = "Clould"
                 }
 
                 "rain" -> {
                     itemView.ivWeatherImage.setImageResource(R.drawable.ic_rain)
+                    itemView.nsvHead.setBackgroundResource(R.drawable.light_rain)
+                    itemView.tvWeatherName.text = "Rain"
                 }
                 "ishower" -> {
                     itemView.ivWeatherImage.setImageResource(R.drawable.ic_rain)
+                    itemView.nsvHead.setBackgroundResource(R.drawable.heavy_rain)
+                    itemView.tvWeatherName.text = "Shower"
                 }
                 "humid" -> {
-                    itemView.ivWeatherImage.setImageResource(R.drawable.ic_cloud)
+                    itemView.ivWeatherImage.setImageResource(R.drawable.cloudyy)
+                    itemView.nsvHead.setBackgroundResource(R.drawable.clear)
+                    itemView.tvWeatherName.text = "Humid"
                 }
                 "oshower" -> {
                     itemView.ivWeatherImage.setImageResource(R.drawable.ic_rain)
+                    itemView.nsvHead.setBackgroundResource(R.drawable.heavy_rain)
+                    itemView.tvWeatherName.text = "shower"
                 }
                 "lightsnowday" -> {
                     itemView.ivWeatherImage.setImageResource(R.drawable.ic_snow)
+                    itemView.nsvHead.setBackgroundResource(R.drawable.snow_fall)
+                    itemView.tvWeatherName.text = "Snow"
                 }
                 "snow" -> {
                     itemView.ivWeatherImage.setImageResource(R.drawable.ic_snow)
+                    itemView.nsvHead.setBackgroundResource(R.drawable.snow_fall)
+                    itemView.tvWeatherName.text = "snow"
                 }
                 "rainsnow" -> {
                     itemView.ivWeatherImage.setImageResource(R.drawable.ic_snow)
+                    itemView.nsvHead.setBackgroundResource(R.drawable.snow_fall)
+                    itemView.tvWeatherName.text = "Rain Snow"
                 }
                 "ts" -> {
                     itemView.ivWeatherImage.setImageResource(R.drawable.ic_thunder)
+                    itemView.nsvHead.setBackgroundResource(R.drawable.thunder)
+                    itemView.tvWeatherName.text = "Thunder"
                 }
                 "tsrain" -> {
                     itemView.ivWeatherImage.setImageResource(R.drawable.ic_thunder)
+                    itemView.nsvHead.setBackgroundResource(R.drawable.thunderrain)
+                    itemView.tvWeatherName.text = "Thunder Rain"
 
                 }
             }

@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gokul.weather.R
 import com.gokul.weather.model.DataseryX
 import kotlinx.android.synthetic.main.item_weathe_details.view.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class WeatherDetailsAdapter : RecyclerView.Adapter<WeatherDetailsAdapter.ViewHolder>() {
     var list: List<DataseryX> = listOf()
@@ -24,26 +26,32 @@ class WeatherDetailsAdapter : RecyclerView.Adapter<WeatherDetailsAdapter.ViewHol
             // Set Humidity
             itemView.tvHumidity.text = item.rh2m
             // set time
-            val time = item.timepoint
-            val dayTime = if (time < 24) time else time % 24
+            val time = item.timepoint - 3
+            val dayTime = time % 24
             itemView.tvTime.text = "$dayTime:00"
 
-            //set day
-            var day = when (time) {
-                in 192..200-> "Day 9"
-                in 168..191 -> "Day 8"
-                in 144..167 -> "Day 7"
-                in 120..143 -> "Day 6"
-                in 96..119 -> "Day 5"
-                in 72..95 -> "Day 4"
-                in 48..71 -> "Day 3"
-                in 24..47 -> "Day 2"
-                else -> "Day 1"
+
+            val calendar = Calendar.getInstance()
+            val  sdf = SimpleDateFormat("yyyy-MM-dd")
+
+
+             when (time) {
+                in 192..200-> calendar.add(Calendar.DAY_OF_MONTH, 8)
+                in 168..191 -> calendar.add(Calendar.DAY_OF_MONTH, 7)
+                in 144..167 -> calendar.add(Calendar.DAY_OF_MONTH, 6)
+                in 120..143 -> calendar.add(Calendar.DAY_OF_MONTH, 5)
+                in 96..119 ->calendar.add(Calendar.DAY_OF_MONTH, 4)
+                in 72..95 -> calendar.add(Calendar.DAY_OF_MONTH, 3)
+                in 48..71 -> calendar.add(Calendar.DAY_OF_MONTH, 2)
+                in 24..47 -> calendar.add(Calendar.DAY_OF_MONTH, 1)
+                else -> calendar.add(Calendar.DAY_OF_MONTH, 0)
             }
+
+            var day = sdf.format(calendar.time)
             itemView.tvDay.text = day.toString()
 
             //Change color
-            if (dayTime in 5..18) {
+            if (dayTime in 7..18) {
                 itemView.cvRoot.setCardBackgroundColor(parseColor("#E5F40F"))
                 itemView.clRoot.setBackgroundResource(R.drawable.day_color)
             } else {
